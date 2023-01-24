@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesajlarim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+
+
+
+
+
+
+</head>
+
+<body>
+    <!--Navbar start-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> <img src="images/Nike_logo_PNG11.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"> Diller</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">EN</a></li>
+                            <li><a class="dropdown-item" href="#">TR</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Aramak icin..."
+                                aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Arama</button>
+                        </form>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav navbar-right menu-bar">
+                    <li class="nav-item">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"> <span class="fa-solid fa-user-shield"></span></a>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="#" id="btn_giris">Giris</a>
+                            <a class="dropdown-item" href="#" id="btn_kayit">Kayit ol</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"> <span class="fa-solid fa-basket-shopping"></span> 
+                            <span class="badge text-bg-primary">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">resim</div>
+                                    <div class="col-md-8">yazi</div>
+                                </div>
+                            </div>
+                            <li><a class="btn btn-primary mt-3 ms-2" id="sepet-id" href="#">Butun Urunler</a></li>
+
+                        </ul>
+                    </li>
+
+
+
+                    <li class="nav-item dropdown me-5">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"> <span class="fa-solid fa-info"></span> </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><span class="fa-solid fa-user"></span>
+                              Profilim</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><span class="fa-solid fa-shopping-basket"></span>
+                                Sepetim</a>
+                            </li>
+                            <li><a class="dropdown-item" href="cupons.html"><span class="fa-solid fa-file-lines"></span>
+                                Kuponlarim</a>
+                            </li>
+                            <li><a class="dropdown-item" href="ordered.html"><span class="fa-solid fa-bag-shopping"></span>
+                                Siparislerim</a>
+                            </li>
+                            <li><a class="dropdown-item" href="address.html"><span class="far fa-map"></span>
+                                Adreslerim</a>
+                            </li>
+                            <li><a class="dropdown-item" href="message.html"><span class="fa-solid fa-envelope"></span>Mesaj <span
+                                class="badge text-bg-danger">2</span> </a>
+                            </li>
+                            <li>
+                                <a href="" id="sifremi_unuttum" class="dropdown-item"><span
+                                class="fa-solid fa-key"></span>Sifremi unuttum</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><span class="fa-solid fa-right-from-bracket"></span>
+                                Cikis</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!--Navbar end-->
+    <main>
+        <nav class="breadcrumb">
+            <a class="breadcrumb-item" href="#">Home</a>
+            <a class="breadcrumb-item" href="#">Mesajlarim</a>
+            <span class="breadcrumb-item active">Detay</span>
+        </nav>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-sm table-striped table hover text-center">
+                            <caption>Mesajlarim</caption>
+                            <thead>
+                                <tr>
+                                    <th>Kimden</th>
+                                    <th>Mesaj Icerigi</th>
+                                    <th>Tarihi</th>
+                                    <th>#</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PTT Kargo</td>
+                                    <td>Siparisiniz yolda</td>
+                                    <td>26/02/2022</td>
+                                    <td>
+                                        <button class="btn btn-primary" id="messageEdit"><span
+                                            class="fa fa-eye"></span></button>
+                                        <button class="btn btn-danger" id="messageTrash"><span
+                                            class="fa fa-trash"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kargo</td>
+                                    <td>Siparisiniz haftaya gelecektir</td>
+                                    <td>26/02/2022</td>
+                                    <td>
+                                        <button class="btn btn-primary" id="messageEdit"><span
+                                            class="fa fa-eye"></span></button>
+                                        <button class="btn btn-danger" id="messageTrash"><span
+                                            class="fa fa-trash"></span></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--Firma Start-->
+    <div class="modal fade" id="messageEditModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="http://placehold.it/60x60" alt="">
+                            </div>
+                            <div class="col-md-8 ">
+                                <p>Lorem, ipsum dolor.</p>
+                                <ul class="list-group">
+                                    <li class="list-group">Lorem ipsum dolor sit amet.</li>
+                                    <li class="list-group">Lorem ipsum dolor sit amet.</li>
+                                    <li class="list-group">Lorem ipsum dolor sit amet.</li>
+                                    <li class="list-group">Lorem ipsum dolor sit amet.</li>
+                                    Lorem ipsum dolor sit amet.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Silme Start-->
+    <div class="modal fade" id="messageTrashModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5></h5>
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <span class="fa fa-trash" style="font-size: 3rem; color: red;"></span>
+                            </div>
+                            <div class="col-md-8">
+                                <h5 class="text-danger mt-3 ml-3">Mesajinizi silmek istediginizden emin misiniz?</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Sil</button>
+                    <button class="btn btn-success" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--Footer Start-->
+    <footer>
+        <div class="row" style="background-color: rgb(73, 71, 71); color:white;">
+            <!--sol taraf-->
+            <div class="col-md-2">
+                <div class="text-muted mt-4 ms-2">
+                    <h5 class="">Address</h5>
+                    <address>
+                        <span class="fa-solid fa-map-location-dot"></span> Ankara/Turkiye <br>
+                        <span class="fa-solid fa-paper-plane"></span> <a href="mailto:"> <span
+                                class="">info@deneme.com</span></a> <br>
+                        <span class="fa-solid fa-phone"></span> <a href="tel.+90 555 55 55:"> <span class="">+90 555 55
+                                55</span></a>
+                    </address>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5">
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe width="400" height="219" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=ankara&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                            href="https://123movies-to.org"></a><br>
+                        <style>
+                            .mapouter {
+                                position: relative;
+                                text-align: right;
+                                height: 219px;
+                                width: 400px;
+                            }
+                        </style><a href="https://www.embedgooglemap.net">embedding maps in website</a>
+                        <style>
+                            .gmap_canvas {
+                                overflow: hidden;
+                                background: none !important;
+                                height: 219px;
+                                width: 400px;
+                            }
+                        </style>
+                    </div>
+                </div>
+
+            </div>
+            <!--Orta taraf-->
+            <div class="col-md-2">
+                <div class="list-group mt-4">
+                    <div class="text-muted">
+                        <h5 class="ml-3">Blog</h5>
+
+                        <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                        <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                        <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                        <a href="#" class="list-group-item list-group-item-action">Lorem ipsum dolor sit.</a>
+                    </div>
+                </div>
+            </div>
+            <!--sag taraf-->
+            <div class="col-md-4 ">
+                <form method="POST" class="mr-5 mt-3">
+                    <div class="text-muted">
+                        <h5>Mail gonder</h5>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="adiniz ve soyadinizi yaziniz" required
+                            id="form-name" name="form-name"> <br>
+                        <small class="text-danger text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Emailinizi yaziniz" required
+                            id="form-email" name="form-email"> <br>
+                        <small class="text-danger text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="1" class="form-control" placeholder="Mesajiniz"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-5 mr-5 mr-auto mt-3"> Gonder</button>
+                    <button type="reset" class="btn btn-primary mb-5 mr-5 mr-auto mt-3"> Temizle</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card text-center" style="background-color: rgb(73, 71, 71); color:white;">
+            <div class="card-body text-bg-light">
+
+                <a href="" class="btn"><span class="fa-brands fa-twitter"></span>Twitter</a>
+                <a href="" class="btn"><span class="fa-brands fa-facebook"></span>Facebook</a>
+                <a href="" class="btn"><span class="fa-brands fa-instagram"></span>Instagram</a>
+                <a href="" class="btn"><span class="fa-brands fa-linkedin"></span>Linkedin</a>
+
+                <div class="card-foot text-muted">
+                    <h6>Designed by Nurzada Zorlu 2023</h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Giris Uye modal-->
+    <div class="modal" id="rego" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                    <h5 class="modal-title"></h5>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <h3>Uye girisi</h3>
+                        <form action="">
+                            <div class="form-group">
+                                <label for="email">Email Adresiniz</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Emailinizi giriniz" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Sifrenizi giriniz</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Sifrenizi giriniz" required>
+                            </div>
+                            <div class="checkbox">
+                                <label for=""></label>
+                                <input type="checkbox">Beni hatirla</input>
+                            </div>
+                            <button type="reset" class="btn btn-danger mr-3">Temizle</button>
+                            <button type="submit" class="btn btn-primary mr-3">Giris</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--Kayit ol Uye Modal-->
+    <div class="modal fade" id="myKayit" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                    <h5 class="modal-title"></h5>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <h3>Kayit ol</h3>
+                        <form action="">
+                            <div class="form-group">
+                                <label for="name">Ad ve Soyadiniz</label>
+                                <input type="text" class="form-control" id="name" name="name"
+                                    placeholder="Adinizi ve soyadinizi giriniz" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon numaraniz</label>
+                                <input type="number" class="form-control" id="phone" name="phone"
+                                    placeholder="Telefon numaranizi giriniz" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Adresiniz</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Emailinizi giriniz" required>
+                                <small class="text-muted text-danger">Emailinizi girmediniz</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Sifrenizi giriniz</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Sifrenizi giriniz" required>
+                                <small class="text-muted text-danger">sifrenizi girmediniz</small>
+                            </div>
+                            <div class="checkbox">
+                                <label for=""></label>
+                                <input type="checkbox">Beni hatirla</input>
+                            </div>
+                            <button type="reset" class="btn btn-danger">Iptal et</button>
+                            <button type="submit" class="btn btn-primary">Kayit ol</button>
+
+
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Sifremi unuttum-->
+    <div class="modal" id="sifreHatirlat" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                    <h5 class="modal-title"></h5>
+                </div>
+                <div class="modal-body">
+                    <h3>Sifremi unuttum</h3>
+                    <form action="POST">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Emailinizi giriniz" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gonder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Sepet-->
+    <div class="modal fade" id="sepet-id-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Sepet</h5>
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 sepet-img">
+                                <img src="images/card1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <p>Lorem, ipsum dolor. <b><del>250 TL</del> 170 TL </b></p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 sepet-img">
+                                <img src="images/card5.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-8  ">
+                                <p>Lorem, ipsum dolor. <b><del>350 TL</del> 250 TL </b> </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 sepet-img">
+                                <img src="images/card8.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-8 ">
+                                <p>Lorem, ipsum dolor. <b><del>430 TL</del> 370 TL </b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="sepet.html" class="btn btn-primary">Odeme</a>
+                    <button class="btn btn-danger">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
